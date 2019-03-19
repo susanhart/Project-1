@@ -2,7 +2,7 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
-//Test
+
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 
@@ -14,7 +14,26 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
-
+var quotes = [ { 
+  quote: "",
+  source: "",
+},
+{
+  quote: "",
+  source: "",
+},
+{ 
+  quote: "",
+  source:"",
+},
+{
+  quote: "",
+  source:"",
+},
+{
+  quote:"",
+  source:"",
+}]
 
 
 
