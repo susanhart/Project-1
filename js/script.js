@@ -15,24 +15,24 @@ project 1 - A Random Quote Generator
   Use console.log() to log your array of quotes to the console.
 ***/
 var quotes = [ { 
-  quote: "",
-  source: "",
+  quote: "Great minds discuss ideas; average minds discuss events; smaill minds discuss people.",
+  source: "Eleanor Roosevelt",
 },
 {
-  quote: "",
-  source: "",
+  quote: "He who angers you conquers you.",
+  source: "Elizabeth Kenny",
 },
 { 
-  quote: "",
-  source:"",
+  quote: "It takes courage to grow up and turn out to be who you really are.",
+  source:"E.E. Cummings",
 },
 {
-  quote: "",
-  source:"",
+  quote: "Sometimes you win, sometimes you learn.",
+  source:"John Maxwell",
 },
 {
-  quote:"",
-  source:"",
+  quote:"Strive not to be a success, but rather to be of value.",
+  source:"Albert Einstein",
 }]
 
 
