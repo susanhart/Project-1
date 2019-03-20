@@ -43,16 +43,16 @@ var quotes = [ {
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 function getRandomQuote(array) {
-  //Random number generator 
+  
 var quoteIndex = Math.floor(Math.random() * quotes.length);
 for (var i = 0; i < array.length; i++) {
-  //array.length rather than the actul quotes variable makes this function a little bit more flexible
+
 var randomquote = array[quoteindex];
-//Random quote variable with the index set to your random number variable
+
 }
-return randomquote; //Returns random quote variable
+return randomquote; 
 }
-//Passes quotes array as an argument and stores result of function in variable
+
 var result = getrandomQuote(quotes);
 console.log(result);
 
