@@ -46,7 +46,7 @@ console.log(quotes);
 function getRandomQuote(array) {
   // creating the getRandomQuote function
 
-  var quoteIndex = Math.floor(Math.random() * quotes.length);
+  var quoteIndex = Math.floor(Math.random() * quotes.length); //assigning a numerical value to the variable QuoteIndex
 
 var randomquote = array[quoteIndex]; //Defining the variable and setting to the item in the array at the variable quote index, a random number between 0 qnd 4
 // Random quote variable with the index set to your random variable 
