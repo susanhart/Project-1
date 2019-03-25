@@ -57,6 +57,7 @@ return randomquote;
 
 getRandomQuote(quotes) 
 //calling the function
+
 var RandomQuote = getRandomQuote(quotes) //Stores the return value
 console.log(RandomQuote) //makes the return value show up in the console
 
