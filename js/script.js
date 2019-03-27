@@ -15,8 +15,10 @@ project 1 - A Random Quote Generator
   Use console.log() to log your array of quotes to the console.
 ***/
 var quotes = [ { 
-  quote: "Great minds discuss ideas; average minds discuss events; smaill minds discuss people.",
-  source: "Eleanor Roosevelt",
+  quote: "Great minds discuss ideas; average minds discuss events; small minds discuss people.", //Array of quote object string
+  source: "Eleanor Roosevelt", //source of array string
+  citation: "Google.com",
+  year: 1950
 },
 {
   quote: "He who angers you conquers you.",
@@ -41,15 +43,15 @@ console.log(quotes);
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
+   - Use the random number to `return` a random quote object from the `quotes` array.
 ***/
 function getRandomQuote(array) {
   // creating the getRandomQuote function
 
   var quoteIndex = Math.floor(Math.random() * quotes.length); //assigning a numerical value to the variable QuoteIndex
 
-var randomquote = array[quoteIndex]; //Defining the variable and setting to the item in the array at the variable quote index, a random number between 0 qnd 4
-// Random quote variable with the index set to your random variable 
+var randomQuote = array[quoteIndex]; //Defining the randomQuote variable as the item within the array, looking for the object within the array at the index position, as represented by the variable QuoteIndex which is storing a random number between 0 and 4, since the length of the array is 5 and the starting index position is 0.
+
 
 return randomquote; 
 //Returns random quote variable 
@@ -66,7 +68,7 @@ console.log(RandomQuote) //makes the return value show up in the console
    - Call the `getRandomQuote` function and assign it to a variable.
    - Create a variable for the HTML string and set it equal to an empty string.
    - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
+     the random quote variable to build your HTML string.
    - Add the quote and source section to the HTML string.
    - Use an if statement to check for the citation property before adding it to the HTML string.
    - Use an if statement to check for the year property before adding it to the HTML string.
@@ -75,10 +77,24 @@ console.log(RandomQuote) //makes the return value show up in the console
 ***/
   function printQuote()  {
      var result = getRandomQuote(); 
-     // Calls and stores the getRandomQuote in a variable 
+     // Calls and stores the getRandomQuote in a variable called result, so that you can reference the object returned from that function.
+     //Stpring an object from the array in the variable result. Result is the object.
+     var message = ""; //Create a variable for the HTML string and set it equal to an empty string.
+
+     message = "<p class='quote>" + result.quote + "</p>" + "<p class = 'source'>" + result.source; 
+     //properties of quote and source of result object and then reinserting the string into HTML on line 82.
+     // Use the HTML template in the instructions or the markup in the index.html file, AND the random quote variable to build your HTML string.
+     //Add the quote and source section to the HTML string.
      
-     var message = "<p class='quote>" + quotes.quote + "</p>" + "<p class = 'source'>" + quotes.source + "</p>";
-     document.getElementById('quote-box').innerHTML = message;  
+     if (result.citation) {
+       message = message + "<span class='citation'>"+result.citation+"</span>";
+       } //adding the result of the variable citation. 
+     if (result.year) {
+       message = message + "<span class='year'>"+result.year+"</span>"; //adding the result of the year property to the string.
+     } 
+     message = message + "</p>"; //adding on the closing tag for the second paragraph elemnent (2 spans need to be inside the paragraph element)
+
+     document.getElementById('quote-box').innerHTML = message; //Taking the message and putting it into the HTML document. 
 }
 
 
