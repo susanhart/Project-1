@@ -52,8 +52,7 @@ function getRandomQuote(array) {
 
 var randomQuote = array[quoteIndex]; //Defining the randomQuote variable as the item within the array, looking for the object within the array at the index position, as represented by the variable QuoteIndex which is storing a random number between 0 and 4, since the length of the array is 5 and the starting index position is 0.
 
-
-return randomquote; 
+return randomQuote; 
 //Returns random quote variable 
 }
 
@@ -76,12 +75,12 @@ console.log(RandomQuote) //makes the return value show up in the console
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
   function printQuote()  {
-     var result = getRandomQuote(); 
+     var result = getRandomQuote(quotes); 
      // Calls and stores the getRandomQuote in a variable called result, so that you can reference the object returned from that function.
      //Stpring an object from the array in the variable result. Result is the object.
      var message = ""; //Create a variable for the HTML string and set it equal to an empty string.
 
-     message = "<p class='quote>" + result.quote + "</p>" + "<p class = 'source'>" + result.source; 
+     message = "<p class='quote'>" + result.quote + "</p>" + "<p class = 'source'>" + result.source; 
      //properties of quote and source of result object and then reinserting the string into HTML on line 82.
      // Use the HTML template in the instructions or the markup in the index.html file, AND the random quote variable to build your HTML string.
      //Add the quote and source section to the HTML string.
